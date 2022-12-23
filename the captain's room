@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+k=int(input())
+no=list(input().split())#add input to list
+diction={}
+length=len(no)
+#add to dictionary
+for i in no:
+    if i in diction:
+        diction[i]+=1
+    else:
+        diction[i]=1
+#iterate to print the captain room number
+for key,value in diction.items():
+    if value == 1 :
+        print(key)
