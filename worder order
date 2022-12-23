@@ -1,0 +1,13 @@
+
+n=int(input())
+od={}
+
+for i in range(n):
+    s=input().strip()
+    if s in od:
+        od[s]=od[s]+1
+    else:
+        od[s]=1
+print(len(od))
+for i,v in od.items():
+    print(v,end=" ")
