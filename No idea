@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n,m=input().split()
+array=list(input().split())
+a=set(input().split())
+b=set(input().split())
+
+happy=0
+lis=[]
+
+# for i in array:
+#     if i not in lis:
+#         lis.append(i)
+for i in array:
+    if i in a:
+        happy += 1
+       
+    if i in b:
+        
+        happy -=1
+print(happy)
