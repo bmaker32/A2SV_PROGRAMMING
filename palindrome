@@ -1,0 +1,21 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        check=True
+        x=str(x)
+        arr=[]
+        for i in x:
+            arr.append(i)
+
+        left = 0
+        right = len(arr) - 1
+
+        while left < right:
+            
+            if arr[left] == arr[right]:
+                print("left",arr[left])
+                print("right",arr[right])
+                left += 1
+                right -= 1
+            else:
+                return False
+        return True
