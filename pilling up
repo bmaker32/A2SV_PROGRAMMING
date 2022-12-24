@@ -1,0 +1,25 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+test = int(input())
+for i in range(test):
+    noblok = int(input())
+    lisblok = list(map(int, input().split()))
+    
+    maxim = float("inf")
+    left = 0
+    right = noblok - 1
+    check = "Yes"
+    while left <= right:
+        if lisblok[left] <= lisblok[right] and lisblok[right] <= maxim:
+            maxim = lisblok[right]
+            right -= 1
+        elif lisblok[left] > lisblok[right] and lisblok[left] <= maxim:
+            maxim = lisblok[left]
+            left += 1
+        else:
+            check="No"
+            break
+    print(check)
+        
+        
+        
+    
