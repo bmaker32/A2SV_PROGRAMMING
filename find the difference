@@ -1,0 +1,8 @@
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        sc = Counter(s)
+        tc = Counter(t)
+
+        for char,num in tc.items():
+            if char not in sc or num != sc[char]:
+                return char
