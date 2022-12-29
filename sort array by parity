@@ -1,0 +1,14 @@
+class Solution:
+    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+        arr=[0]*len(nums)
+        left=0
+        right=len(nums)-1
+        for i in range(len(nums)):
+            if nums[i]%2 == 0:
+                arr[left] = nums[i]
+                left+=1
+            else:
+                arr[right] = nums[i]
+                right -= 1
+        return arr
+
