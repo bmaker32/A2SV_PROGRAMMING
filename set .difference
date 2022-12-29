@@ -1,0 +1,7 @@
+ne=int(input())
+arre=set(input().split())
+nf = int(input())
+arrf = set(input().split())
+
+
+print(len(arre.difference(arrf)))
