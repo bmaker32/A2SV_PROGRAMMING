@@ -1,0 +1,15 @@
+class Solution:
+    def interpret(self, command: str) -> str:
+        stack=[]
+        string=''
+        for i in command:
+            if i ==')' and stack[-1] == '(':
+                string+='o'
+            elif i == 'G':
+                string+=i
+            elif i == '(' or i == 'a' or i == 'l':
+                stack.append(i)
+            elif i == ")" and stack[-1] == 'l':
+                string+='al'
+                stack.clear()
+        return string
