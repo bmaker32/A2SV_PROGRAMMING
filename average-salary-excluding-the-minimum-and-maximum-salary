@@ -1,0 +1,19 @@
+class Solution:
+    def average(self, salary: List[int]) -> float:
+        max=0
+        min=salary[0]
+        for i in salary:
+            if max<i:
+                max=i
+            if min > i:
+                min=i
+
+        count=0
+        avg=0
+
+        for i in salary:
+            if i != max and i != min:
+                avg+=i
+                count+=1
+        return avg/count
+            
