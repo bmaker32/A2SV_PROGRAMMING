@@ -1,0 +1,14 @@
+big = set(input().split())
+n = int(input())
+tup = ()
+se = True
+
+for i in range(n):
+    tup = set(input().split())
+    
+    if not tup < big:
+        print("False")
+        se = False
+        break
+if se:
+    print("True")
