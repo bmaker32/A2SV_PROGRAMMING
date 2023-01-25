@@ -1,0 +1,20 @@
+def funi():
+    x,y = map(int,input().split())
+    li = list(map(int,input().split()))
+    li2 = list(map(int,input().split()))
+    ans = []
+ 
+    up = 0
+    bott = 0
+    for i in range(len(li2)):
+        
+        while up < len(li) and li[up] < li2[i]  :
+            up +=1
+        ans.append(up)
+    print(*ans) 
+ 
+ 
+ 
+ 
+ 
+funi()
